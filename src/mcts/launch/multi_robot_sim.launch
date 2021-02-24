@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- Upload a map from the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find mcts)/map/mymap.yaml" >
+      <param name="frame_id" value="map" />
+    </node>
+
+    <node name="multi_robot_sim" pkg="mcts" type="multi_robot_sim" output="screen"/>
+
+    <node name="mcts_planner" pkg="mcts" type="mcts_planner" output="screen"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mcts)/launch/multi_robot_coverage.rviz"/>
+</launch>

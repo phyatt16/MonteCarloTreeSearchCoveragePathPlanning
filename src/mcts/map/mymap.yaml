@@ -1,0 +1,11 @@
+#image: emptymap.png
+image: middlepillarmap.png
+#image: floorplanmap.png
+#image: mymap.png
+#image: recommend_desk_map.png
+
+resolution: .05
+origin: [-7.50, -6.5, 0.0]
+occupied_thresh: 0.99
+free_thresh: 0.5
+negate: 0
